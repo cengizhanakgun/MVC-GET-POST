@@ -1,0 +1,27 @@
+﻿
+@using MVC_GET_POST.Models
+@model Books
+@{
+    ViewBag.Title = "Kitap";
+}
+
+<h2>Kitap</h2>
+
+<div>
+    <h2>Kitap verileri</h2>
+    <h4>Seri No:@Model.seriNo </h4>
+    <h4>Kitap Adı:@Model.kitapAdi</h4>
+    <h4>Yazar Adı:@Model.yazarAdi</h4>
+    <h4>Yazar Yaşı:@Model.yas</h4>
+
+</div>
+
+
+@using (Html.BeginForm())
+{
+  <p>Seri Numarası:</p>  @Html.TextBoxFor(x => x.seriNo) <br />
+  <p>Kitap Adı:</p>  @Html.TextBoxFor(x => x.kitapAdi) <br />
+  <p>Yazar Adı:</p>  @Html.TextBoxFor(x => x.yazarAdi) <br />
+ <p>Yazar Yaşı:</p>   @Html.TextBoxFor(x => x.yas) <br />
+    <input type="submit" value="Gönder" /> <br />
+}
